@@ -20,11 +20,11 @@ logging:
     io.github.jhipster: INFO
 
 eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+    instance:
+        prefer-ip-address: false
+    client:
+        service-url:
+            defaultZone: http://admin:hackathon2019@hackathon-eureka-2.herokuapp.com/eureka/
 
 management:
   metrics:
@@ -39,9 +39,11 @@ spring:
     livereload:
       enabled: false
   data:
-    mongodb:
-      uri: mongodb://localhost:27017
-      database: helloworld
+      mongodb:
+          #  mongodb+srv://huser:Hackaton2019@cluster0-eagup.azure.mongodb.net/admin?retryWrites=true&w=majority
+          uri: mongodb://hackathonuser:ZrWWtIFHn7ws9nGDO9nnD2ysgXmXi9qawpiQiO7N5c0Fd8GCpmO1j5xRAJm7lfmoJM6xdiS0ECNyg2X6EyegAg==@hackathonuser.documents.azure.com:10255/?ssl=true&replicaSet=globaldb
+          database: hwdb
+          port: 80
   mail:
     host: localhost
     port: 25
@@ -79,7 +81,7 @@ spring:
 #        ciphers: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 ,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA,TLS_RSA_WITH_CAMELLIA_256_CBC_SHA,TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA,TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
 # ===================================================================
 server:
-  port: 8081
+  port: 8080
   compression:
     enabled: true
     mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json

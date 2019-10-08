@@ -51,14 +51,16 @@ public class DatabaseConfiguration {
         return new MongoCustomConversions(converters);
     }
 
-    @Bean
+/*    @Bean
     public Mongobee mongobee(MongoClient mongoClient, MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
         log.debug("Configuring Mongobee");
         Mongobee mongobee = new Mongobee(mongoClient);
+        mongobee.setEnabled(false);
         mongobee.setDbName(mongoProperties.getMongoClientDatabase());
         mongobee.setMongoTemplate(mongoTemplate);
         // package to scan for migrations
         mongobee.setChangeLogsScanPackage("com.db.hackathon.config.dbmigrations");
         mongobee.setEnabled(true);
         return mongobee;
-    }}
+    }*/
+}

@@ -416,6 +416,33 @@
                 <artifactId>openapi-generator-maven-plugin</artifactId>
             </plugin>
             <!-- jhipster-needle-maven-add-plugin -->
+            <plugin>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <!-- check Maven Central for the latest version -->
+                <version>1.6.0</version>
+                <configuration>
+                    <schemaVersion>v2</schemaVersion>
+                    <resourceGroup>xteam-rg</resourceGroup>
+                    <appName>xteam-hw</appName>
+                    <runtime>
+                        <os>Linux</os>
+                        <javaVersion>java11</javaVersion>
+                    </runtime>
+                    <pricingTier>B1</pricingTier>
+                    <region>France Central</region>
+                    <deployment>
+                        <resources>
+                            <resource>
+                                <directory>${project.basedir}/target</directory>
+                                <includes>
+                                    <include>${project.build.finalName}.jar</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </deployment>
+                </configuration>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
