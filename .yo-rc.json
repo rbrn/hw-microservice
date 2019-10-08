@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.db.hackathon"
+    },
+    "jhipsterVersion": "6.0.0",
+    "applicationType": "microservice",
+    "baseName": "helloworld",
+    "packageName": "com.db.hackathon",
+    "packageFolder": "com/db/hackathon",
+    "serverPort": "8081",
+    "authenticationType": "uaa",
+    "uaaBaseName": "uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "NmYzM2M0YTAxYmQ0NjNkZTg1NDZiNjI4MzcwNGVhOGQ1ODRhODNjMDc1MWM5NTYyOTdkNGViMzk0NzA4NzA5NTZjZDEyOGNkZTdlNThiMmM5MjM0NTFkMzAyODQyYWI1OWFhZTE3MjJmMzQyZDY5MTBkMTBlYjVkNTc5OThlY2U=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
