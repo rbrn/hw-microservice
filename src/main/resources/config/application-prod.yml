@@ -22,6 +22,7 @@ logging:
 eureka:
     instance:
         prefer-ip-address: false
+        hostname: xteam-hw.azurewebsites.net
     client:
         service-url:
             defaultZone: http://admin:hackathon2019@hackathon-eureka-2.herokuapp.com/eureka/

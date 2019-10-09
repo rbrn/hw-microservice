@@ -4,9 +4,6 @@ enum Category {
 
 
 entity Question {
-	/**
-	* The firstname attribute.
-	*/
 	text String,
 	category Category,
 	isForQuizz Boolean,

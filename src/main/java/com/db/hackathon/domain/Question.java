@@ -1,14 +1,12 @@
 package com.db.hackathon.domain;
 
 
-import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.List;
 
 import com.db.hackathon.domain.enumeration.Category;
 
@@ -23,10 +21,6 @@ public class Question implements Serializable {
     @Id
     private String id;
 
-    /**
-     * The firstname attribute.
-     */
-    @ApiModelProperty(value = "The firstname attribute.")
     @Field("text")
     private String text;
 
@@ -36,8 +30,12 @@ public class Question implements Serializable {
     @Field("is_for_quizz")
     private Boolean isForQuizz;
 
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
+
     @Field("answers")
-    private String answers;
+    private List<Answer> answers;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -87,18 +85,15 @@ public class Question implements Serializable {
         this.isForQuizz = isForQuizz;
     }
 
-    public String getAnswers() {
+    public List<Answer> getAnswers() {
         return answers;
     }
 
-    public Question answers(String answers) {
+    public Question answers(List<Answer> answers) {
         this.answers = answers;
         return this;
     }
 
-    public void setAnswers(String answers) {
-        this.answers = answers;
-    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override

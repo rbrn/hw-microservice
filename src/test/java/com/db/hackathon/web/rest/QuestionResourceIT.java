@@ -91,8 +91,7 @@ public class QuestionResourceIT {
         Question question = new Question()
             .text(DEFAULT_TEXT)
             .category(DEFAULT_CATEGORY)
-            .isForQuizz(DEFAULT_IS_FOR_QUIZZ)
-            .answers(DEFAULT_ANSWERS);
+            .isForQuizz(DEFAULT_IS_FOR_QUIZZ);
         return question;
     }
 
@@ -193,7 +192,7 @@ public class QuestionResourceIT {
             .text(UPDATED_TEXT)
             .category(UPDATED_CATEGORY)
             .isForQuizz(UPDATED_IS_FOR_QUIZZ)
-            .answers(UPDATED_ANSWERS);
+            ;
 
         restQuestionMockMvc.perform(put("/api/questions")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
