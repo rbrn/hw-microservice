@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -72,5 +73,10 @@ public class AnswerServiceImpl implements AnswerService {
     public void delete(String id) {
         log.debug("Request to delete Answer : {}", id);
         answerRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Answer> save(List<Answer> answers) {
+        return answerRepository.saveAll(answers);
     }
 }

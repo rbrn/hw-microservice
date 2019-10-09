@@ -65,6 +65,24 @@ public class AnswerResource {
     }
 
     /**
+     * {@code POST  /answers} : Create a new answer.
+     *
+     * @param answers the answer to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new answer, or with status {@code 400 (Bad Request)} if the answer has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping("/answers")
+    public ResponseEntity<List<Answer>> createAnswers(@RequestBody List<Answer> answers) throws URISyntaxException {
+        log.debug("REST request to save Answer : {}", answers);
+
+        List<Answer> answersPersisted =  answerService.save(answers);
+
+        return ResponseEntity.created(new URI("/api/answers/"))
+            .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, "Created" + answersPersisted.size()))
+            .body(answersPersisted);
+    }
+
+    /**
      * {@code PUT  /answers} : Updates an existing answer.
      *
      * @param answer the answer to update.

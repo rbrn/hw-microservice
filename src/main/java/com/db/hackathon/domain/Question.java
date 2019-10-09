@@ -30,12 +30,12 @@ public class Question implements Serializable {
     @Field("is_for_quizz")
     private Boolean isForQuizz;
 
-    public void setAnswers(List<Answer> answers) {
-        this.answers = answers;
+    public void setAnswerChoises(List<AnswerChoice> answerChoises) {
+        this.answerChoises = answerChoises;
     }
 
-    @Field("answers")
-    private List<Answer> answers;
+    @Field("answerChoises")
+    private List<AnswerChoice> answerChoises;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -85,12 +85,12 @@ public class Question implements Serializable {
         this.isForQuizz = isForQuizz;
     }
 
-    public List<Answer> getAnswers() {
-        return answers;
+    public List<AnswerChoice> getAnswerChoises() {
+        return answerChoises;
     }
 
-    public Question answers(List<Answer> answers) {
-        this.answers = answers;
+    public Question answers(List<AnswerChoice> answers) {
+        this.answerChoises = answers;
         return this;
     }
 
@@ -119,7 +119,7 @@ public class Question implements Serializable {
             ", text='" + getText() + "'" +
             ", category='" + getCategory() + "'" +
             ", isForQuizz='" + isIsForQuizz() + "'" +
-            ", answers='" + getAnswers() + "'" +
+            ", answerChoises='" + getAnswerChoises() + "'" +
             "}";
     }
 }

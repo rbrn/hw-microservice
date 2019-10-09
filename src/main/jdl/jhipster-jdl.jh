@@ -7,7 +7,7 @@ entity Question {
 	text String,
 	category Category,
 	isForQuizz Boolean,
-    answers String
+    answerChoises String
 }
 
 entity AnswerChoice {
