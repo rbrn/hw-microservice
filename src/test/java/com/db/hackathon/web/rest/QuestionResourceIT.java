@@ -28,6 +28,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.db.hackathon.domain.enumeration.Category;
 /**
  * Integration tests for the {@Link QuestionResource} REST controller.
  */
@@ -37,8 +38,8 @@ public class QuestionResourceIT {
     private static final String DEFAULT_TEXT = "AAAAAAAAAA";
     private static final String UPDATED_TEXT = "BBBBBBBBBB";
 
-    private static final String DEFAULT_CATEGORY = "AAAAAAAAAA";
-    private static final String UPDATED_CATEGORY = "BBBBBBBBBB";
+    private static final Category DEFAULT_CATEGORY = Category.FOOD;
+    private static final Category UPDATED_CATEGORY = Category.TRAVEL;
 
     private static final Boolean DEFAULT_IS_FOR_QUIZZ = false;
     private static final Boolean UPDATED_IS_FOR_QUIZZ = true;

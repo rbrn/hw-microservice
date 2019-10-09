@@ -10,6 +10,8 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.db.hackathon.domain.enumeration.Category;
+
 /**
  * A Question.
  */
@@ -29,7 +31,7 @@ public class Question implements Serializable {
     private String text;
 
     @Field("category")
-    private String category;
+    private Category category;
 
     @Field("is_for_quizz")
     private Boolean isForQuizz;
@@ -59,16 +61,16 @@ public class Question implements Serializable {
         this.text = text;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public Question category(String category) {
+    public Question category(Category category) {
         this.category = category;
         return this;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 

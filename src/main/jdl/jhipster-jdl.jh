@@ -1,10 +1,14 @@
+enum Category {
+    FOOD, TRAVEL, HOME, STUFF
+}
+
 
 entity Question {
 	/**
 	* The firstname attribute.
 	*/
 	text String,
-	category String,
+	category Category,
 	isForQuizz Boolean,
     answers String
 }
@@ -18,8 +22,26 @@ entity Answer {
   answerChoiseId String
 }
 
-paginate Question with pagination
-paginate Answer with pagination
-paginate AnswerChoice with pagination
+entity Status {
+    level String,
+    subLevel Float,
+    currencyAmount Long
+}
+entity Transaction {
+    transactionAmount Long
+}
+entity Challenge {
+    title String,
+    creditAmount Long,
+}
+entity WeeklyChallengeStatus {
+    count Long
+}
+entity Cause {
+    title String,
+    description String,
+    unlockCurrencyAmount Long
+}
 
+paginate * with pagination
 service all with serviceImpl

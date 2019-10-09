@@ -424,8 +424,7 @@
                 <configuration>
                     <schemaVersion>v2</schemaVersion>
                     <resourceGroup>xteam-rg</resourceGroup>
-                    <subscriptionId>8342d1cd-65a5-4457-997a-248a8d0b8480</subscriptionId>
-                    <appName>xteam-hw-test</appName>
+                    <appName>xteam-hw</appName>
                     <runtime>
                         <os>Linux</os>
                         <javaVersion>java11</javaVersion>
