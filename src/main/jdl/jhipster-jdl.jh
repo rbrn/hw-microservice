@@ -6,7 +6,7 @@ entity Question {
 	text String,
 	category String,
 	isForQuizz Boolean,
-    answers 
+    answers String
 }
 
 entity AnswerChoice {
@@ -15,10 +15,11 @@ entity AnswerChoice {
 
 entity Answer {
   userId String,
-  answerChoiseId
+  answerChoiseId String
 }
 
-paginate Question, Answer, AnswerChoice with with pagination
-service all with serviceImpl
+paginate Question with pagination
+paginate Answer with pagination
+paginate AnswerChoice with pagination
 
-microservice Question, Answer, AnswerChoice with xteam
+service all with serviceImpl
