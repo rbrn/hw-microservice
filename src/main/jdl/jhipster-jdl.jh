@@ -1,0 +1,24 @@
+
+entity Question {
+	/**
+	* The firstname attribute.
+	*/
+	text String,
+	category String,
+	isForQuizz Boolean,
+    answers 
+}
+
+entity AnswerChoice {
+	label String
+}
+
+entity Answer {
+  userId String,
+  answerChoiseId
+}
+
+paginate Question, Answer, AnswerChoice with with pagination
+service all with serviceImpl
+
+microservice Question, Answer, AnswerChoice with xteam
