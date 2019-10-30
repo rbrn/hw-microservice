@@ -1,0 +1,55 @@
+enum Category {
+    FOOD, TRAVEL, HOME, STUFF
+}
+
+
+entity Question {
+	text String,
+	category Category,
+	isForQuizz Boolean,
+    answerChoises String
+}
+
+entity AnswerChoice {
+	label String
+}
+
+entity Answer {
+  userId String,
+  answerChoiseId String
+}
+
+entity Status {
+    level String,
+    subLevel Float,
+    currencyAmount Long,
+    userId String
+}
+entity Transaction {
+    userId String,
+    causeId String,
+    statusId String,
+    transactionAmount Long
+}
+entity Challenge {
+    title String,
+    creditAmount Long,
+}
+
+entity WeeklyChallengeStatus {
+    userId String,
+    count Long,
+    challengeId String
+}
+
+entity Cause {
+    title String,
+    description String,
+    unlockLevel Integer,
+    target Long,
+    currencyAmount Long,
+    totalUsers Long
+}
+
+paginate * with pagination
+service all with serviceImpl
