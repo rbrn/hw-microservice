@@ -45,9 +45,8 @@ spring:
   data:
       mongodb:
           #  mongodb+srv://huser:Hackaton2019@cluster0-eagup.azure.mongodb.net/admin?retryWrites=true&w=majority
-          uri: mongodb://teamxmongodb:8SarUvcnsKcN9Cjh1puhJkM3amHfji88TFHe0aRBdb0hsPj2wPisKEsocBFktSyqDgubokEqWAHxnpnAbpvmFw%3D%3D@teamxmongodb.documents.azure.com:10255/?ssl=true&replicaSet=globaldb&authSource=admin
-          database: prometheus
-          port: 80
+          uri: mongodb://gatewayuser:gatewayuser@cluster0-shard-00-00-eagup.azure.mongodb.net:27017,cluster0-shard-00-01-eagup.azure.mongodb.net:27017,cluster0-shard-00-02-eagup.azure.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority
+          database: test
   mail:
     host: localhost
     port: 25
@@ -68,7 +67,7 @@ spring:
         enabled: true
 
 server:
-  port: 8088
+  port: ${PORT:8080}
 
 # ===================================================================
 # JHipster specific properties
