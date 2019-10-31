@@ -21,12 +21,11 @@ logging:
 
 eureka:
     instance:
-        prefer-ip-address: false
-        hostname: xteamprometheus.azurewebsites.net
+        prefer-ip-address: true
     client:
         service-url:
-            #defaultZone: https://admin:admin@xteameureka.azurewebsites.net/eureka/
-            defaultZone: http://admin:hackathon2019@hackathon-eureka-2.herokuapp.com/eureka/
+        defaultZone: http://admin:hackathon2019@hackathon-eureka-2.herokuapp.com/eureka/
+
 management:
   metrics:
     export:
@@ -37,7 +36,7 @@ spring:
   devtools:
     restart:
       enabled: false
-    livereload:  
+    livereload:
       enabled: false
   data:
       mongodb:
