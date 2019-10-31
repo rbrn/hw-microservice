@@ -24,7 +24,7 @@ eureka:
         prefer-ip-address: true
     client:
         service-url:
-            defaultZone: https://admin:admin@xteameureka.azurewebsites.net/eureka/
+        defaultZone: http://admin:hackathon2019@hackathon-eureka-2.herokuapp.com/eureka/
 
 
 spring:
